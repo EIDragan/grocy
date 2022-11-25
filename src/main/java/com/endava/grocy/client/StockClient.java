@@ -17,5 +17,22 @@ public class StockClient extends BaseClient {
 
     }
 
+    public Response getProduct(Integer productId) {
+
+        return getBasicRestConfig()
+                .contentType(ContentType.JSON)
+                .pathParam("productId", productId)
+                .get("stock/products/{productId}");
+
+    }
+
+    public Response getLocationsForProductWithId(Integer productId) {
+
+        return getBasicRestConfig()
+                .contentType(ContentType.JSON)
+                .pathParam("productId", productId)
+                .get("stock/products/{productId}/locations");
+
+    }
 
 }

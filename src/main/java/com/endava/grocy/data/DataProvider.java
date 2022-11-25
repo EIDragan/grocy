@@ -31,7 +31,7 @@ public class DataProvider {
 
     public QuantityUnit getQuantityUnit() {
         QuantityUnit quantityUnit = new QuantityUnit();
-        quantityUnit.setName(faker.food().measurement() + " " + faker.number().digit());
+        quantityUnit.setName(faker.food().measurement() + " " + faker.howIMetYourMother().quote());
         quantityUnit.setNamePlural(quantityUnit.getName() + "s");
         quantityUnit.setDescription(faker.backToTheFuture().quote());
 
